@@ -3,6 +3,9 @@ const readline = require('readline').createInterface({
     output: process.stdout
 })
 
+let primeFactorArr = new Array();
+let counter = 0;
+
 readline.question(`Enter the number `, number => {
    
     let fact = 1;
@@ -18,11 +21,15 @@ readline.question(`Enter the number `, number => {
             }
         }
 
-        if (flag == 0)
+        if (flag == 0){
             console.log("Prime " + j)
+            primeFactorArr[counter++] = j;
+        }
     }
 
     console.log(fact)
+
+    console.log(primeFactorArr)
 
     readline.close();
 })

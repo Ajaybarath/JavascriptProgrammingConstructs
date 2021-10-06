@@ -29,3 +29,18 @@ for (var i = 0; i < 10; i++) {
 }
 
 console.log("2nd min : " + min2 + " 2nd max : " + max2)
+
+for (var i = 0; i < 10; i++) {
+    for (var j = 0; j < 10; j++) {
+        
+        if (randomNumbers[j] > randomNumbers[j+1]) {
+            let temp = randomNumbers[j];
+            randomNumbers[j] = randomNumbers[j+1]
+            randomNumbers[j+1] = temp
+        }
+    }
+}
+
+console.log("2nd min : " + randomNumbers[1] + " 2nd max : " + randomNumbers[8])
+
+
